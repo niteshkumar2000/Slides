@@ -1,3 +1,3 @@
 # Slides
 
-Check out here for my presentations built using reveal.js!
+Check out [here](https://niteshkumar2000.github.io/Slides/) for my presentations built using reveal.js!
