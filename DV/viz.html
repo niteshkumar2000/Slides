@@ -19,6 +19,8 @@
     <!-- Including our JS scripts required for viz-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="./viz.js"></script>
+    <script type="text/javascript" src="./viz_commute.js"></script>
+    <script type="text/javascript" src="./viz_style.js"></script>
 </head>
 <body>
     <div class="reveal">
@@ -72,16 +74,16 @@ data.addColumn('string', 'Dependencies');
 
 // Adding data rows
 data.addRows([
-['Research', 'Find sources',
-new Date(2015, 0, 1), new Date(2015, 0, 5), null, 100, null],
-['Write', 'Write paper',
-null, new Date(2015, 0, 9), daysToMilliseconds(3), 25, 'Research,Outline'],
-['Cite', 'Create bibliography',
-null, new Date(2015, 0, 7), daysToMilliseconds(1), 20, 'Research'],
-['Complete', 'Hand in paper',
-null, new Date(2015, 0, 10), daysToMilliseconds(1), 0, 'Cite,Write'],
-['Outline', 'Outline paper',
-null, new Date(2015, 0, 6), daysToMilliseconds(1), 100, 'Research']
+['Research', 'Find sources', new Date(2015, 0, 1),
+new Date(2015, 0, 5), null, 100, null],
+['Write', 'Write paper', null, new Date(2015, 0, 9), 
+daysToMilliseconds(3), 25, 'Research,Outline'],
+['Cite', 'Create bibliography', null, new Date(2015, 0, 7), 
+daysToMilliseconds(1), 20, 'Research'],
+['Complete', 'Hand in paper', null, new Date(2015, 0, 10), 
+daysToMilliseconds(1), 0, 'Cite,Write'],
+['Outline', 'Outline paper', null, new Date(2015, 0, 6), 
+daysToMilliseconds(1), 100, 'Research']
 ]);
 
 // Setting some options for display
@@ -97,7 +99,27 @@ chart.draw(data, options);
                 </section>
             </section>
             <section>
-                <section>References</section>
+                <section>
+                    Better grouping of tasks!
+                </section>
+                <section>
+                    <div id="chart_div_commute">
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    How about some styling?
+                </section>
+                <section>
+                    <div id="chart_div_style">
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    References
+                </section>
                 <section>
                     <ul>
                         <li>

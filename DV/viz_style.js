@@ -30,10 +30,25 @@ function drawChart() {
     ]);
 
     var options = {
-        height: 250,
+        height: 275,
+        gantt: {
+            criticalPathEnabled: false,
+            innerGridHorizLine: {
+            stroke: '#ffe0b2',
+            strokeWidth: 2
+            },
+            innerGridTrack: {fill: '#fff3e0'},
+            innerGridDarkTrack: {fill: '#ffcc80'},
+            arrow: {
+              angle: 100,
+              width: 5,
+              color: 'green',
+              radius: 0
+            }
+        }
     };
 
-    var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+    var chart = new google.visualization.Gantt(document.getElementById('chart_div_style'));
 
     chart.draw(data, options);
 }
